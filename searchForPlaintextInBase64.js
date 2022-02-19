@@ -8,12 +8,6 @@ function searchForPlainTextInBase64(plaintext, base64string){
     let start = fullString.indexOf(searchString)
     if (start == -1) { return null }
     finish = start + searchString.length
-    // console.log(bEnc.toString('hex'), bPlain.toString('hex'));
-    // console.log(bEnc, bPlain);
-    // for(i=0; i<bEnc.length; i++){
-    //     let finish = i+bPlain.length
-    //     if(bEnc.slice(i,finish) == bPlain){return [i, finish]}
-    // }
     return [start * 2, finish * 2]; //convert nibbles to bytes by multiplying by 2
 }
 
